@@ -31,7 +31,7 @@ public class MainEjerciciosRepaso {
 		System.out.println(EjerciciosAdicionales.japaneseGreeting());
 //		
 		//Adivina la Película
-		System.out.println(EjerciciosAdicionales.guessTheMovie("\uD83E\uDD7E",
+		System.out.println(EjerciciosAdicionales.guessTheMovie("😊😁😂",
 				"\uD83C\uDF44", "\uD83D\uDC51"));
 		System.out.println(EjerciciosAdicionales.guessTheMovie("\uD83D\uDEA2",
 				"\uD83E\uDDCA", "\uD83D\uDC94"));
