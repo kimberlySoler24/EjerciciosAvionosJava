@@ -1,5 +1,7 @@
 package kimberly.code.programacionBasica;
 
+import java.util.Arrays;
+
 public class Arreglos {
 
 	//Write a function histogram(int[]), that takes an array of positive numbers, stats, 
@@ -17,13 +19,9 @@ public class Arreglos {
 	//Write a function that given an int of arrays returns the max number in it.
 
 		public static int max (int [] maxNumber) {
-			var max = 0;
-			for (var i=0; i < maxNumber.length; i++) {
-				if (maxNumber[i] >= max) {
-					max = maxNumber[i];
-				}
-			}
-			return max;
+		    var order =Arrays.copyOf(maxNumber,  maxNumber.length);
+		    Arrays.sort(order);
+			return order[order.length - 1];
 		}
 
 	//Given an array of numbers ranging from 0 to 5, return an array of numbers with the 
@@ -47,4 +45,26 @@ public class Arreglos {
 			}
 			return arraysResult;
 		}
+		
+		// Create a function that, given the dimensions of a matrix returns a matrix with each cell being a positive number in ascending order form
+		//top to bottom, left to right starting with 1.
+		
+		public static String numericMatrix (int row, int col) {
+			var builder = new StringBuilder ();
+			var sum = 0;
+			var result = new int [row] [col]; 
+			for (var r=0; r < row; ++r) {
+				for (var c = 0; c < col; ++c) {
+					sum += 1;
+					builder.append(Integer.toString(result [r][c] = sum));
+				}
+				builder.append(System.lineSeparator());
+			}
+			return builder.toString();
+		}
+		
+		
+		
+		
+		
 }
