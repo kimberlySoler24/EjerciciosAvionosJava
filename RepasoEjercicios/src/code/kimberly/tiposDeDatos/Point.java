@@ -1,17 +1,18 @@
 package code.kimberly.tiposDeDatos;
 
+
 import java.util.Objects;
 
- public class punto { //objeto
+ public class Point { //objeto
 
 	//ATRIBUTOS
 	private double x; //private es para hacer cambios internos y que nadie los vea.
 	private double y;
 	
 	//CONSTRUCTORES, también reciben parámetros
-	public punto(double x, double y) {
+	public Point(double x, double y) { //public es el modificador de acceso
 		this.x = x; //para hacer referencia a los atributos de private se usa el método this. ...
-		this.y = y; // quiere decir que el atributo y tenga el mismo valor del parámetro y y así... 
+		this.y = y; // quiere decir que el atributo y tenga el mismo valor del parámetro y y así.. con esto se puede dart a conocer los atributos que son privados. 
 	}
 	
 	//MÉTODO
@@ -30,7 +31,7 @@ import java.util.Objects;
 	 * @return la distancia cálculada sobre (p1.x, p1.y) y (p2.x, p2.y)
 	 */
 	
-public static double distance(punto p1, punto p2) {
+public static double distance(Point p1, Point p2) {
 		
 		var substractX = p2.x() - p1.x(); //al punto1 saque la x y al punto 2 saque la x
 		var substractY = p2.y() - p1.y();
@@ -48,15 +49,14 @@ public static double distance(punto p1, punto p2) {
  * @return true si este punto comparte una coordenada x o y o false si no comparte alguna coorenada 
  */
 	
-	public boolean sharedCoordinate(punto p) { //revisar si tiene una coordenada compartida con otro punto
+	public boolean sharedCoordinate(Point p) { //revisar si tiene una coordenada compartida con otro punto
 		return this.x == p.x || this.y == p.y;
 	}
 	
-	
-public double distance1(punto p) {
+public double distance1(Point p) {
 		
-		var substractX = p.x() - this.x;
-		var substractY = p.y() - this.y;
+		var substractX = p.x - this.x;
+		var substractY = p.y - this.y;
 		var squareX = Math.pow(substractX, 2);
 		var squareY = Math.pow(substractY, 2);
 		var plus = squareX + squareY;
@@ -81,7 +81,7 @@ public boolean equals(Object obj) {
 		return false;
 	if (getClass() != obj.getClass())
 		return false;
-	punto other = (punto) obj;
+	Point other = (Point) obj;
 	return Double.doubleToLongBits(x) == Double.doubleToLongBits(other.x)
 			&& Double.doubleToLongBits(y) == Double.doubleToLongBits(other.y);
 }
