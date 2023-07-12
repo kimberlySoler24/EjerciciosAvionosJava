@@ -1,5 +1,6 @@
 package kimberly.code.programacionBasica;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class MainEjerciciosRepaso {
@@ -18,25 +19,33 @@ public class MainEjerciciosRepaso {
 		
 //		System.out.println(Operators.truncate(123));
 		
-//		System.out.println(Arrays.toString(Arreglos.stats(new int [] {5})));
-//		System.out.println(Arreglos.histogram(new int [] {5, 1, 3}));
 		
 		//CONDICIONALES 
-		
 //		System.out.println(conditionals.camelCaseToSnakeCase("lastThreeDigits"));
-//		
+		
+		
+		//ARREGLOS
+//	System.out.println(Arrays.toString(Arreglos.stats(new int [] {5})));
+//    System.out.println(Arreglos.histogram(new int [] {5, 1, 3}));
+//	System.out.println(Arreglos.max(new int[] {-3, -2, -1}));
+//	System.out.println(Arreglos.max(new int[] {5, -2, -1}));
+//	System.out.println(Arreglos.max(new int[] {-3, 0, -21}));
+//	System.out.println(Arreglos.max(new int[] {100, -50, 21}));
+	System.out.println(Arreglos.numericMatrix(2, 3));
+	System.out.println(Arreglos.numericMatrix(3, 1));
+		
 		//EJERCICIOS ADICIONALES
 		
 		// Konnichiwa Sekai!
-		System.out.println(EjerciciosAdicionales.japaneseGreeting());
+//		System.out.println(EjerciciosAdicionales.japaneseGreeting());
 //		
 		//Adivina la Película
-		System.out.println(EjerciciosAdicionales.guessTheMovie("😊😁😂",
-				"\uD83C\uDF44", "\uD83D\uDC51"));
-		System.out.println(EjerciciosAdicionales.guessTheMovie("\uD83D\uDEA2",
-				"\uD83E\uDDCA", "\uD83D\uDC94"));
-		System.out.println(EjerciciosAdicionales.guessTheMovie("\uD83D\uDC7D",
-				"\uD83D\uDCDE", "\uD83C\uDFE0"));
+//		System.out.println(EjerciciosAdicionales.guessTheMovie("😊😁😂",
+//				"\uD83C\uDF44", "\uD83D\uDC51"));
+//		System.out.println(EjerciciosAdicionales.guessTheMovie("\uD83D\uDEA2",
+//				"\uD83E\uDDCA", "\uD83D\uDC94"));
+//		System.out.println(EjerciciosAdicionales.guessTheMovie("\uD83D\uDC7D",
+//				"\uD83D\uDCDE", "\uD83C\uDFE0"));
 ////		
 //		//Aumento y Descuento
 //		System.out.println(EjerciciosAdicionales.IncrementProduct(1000, 16));
