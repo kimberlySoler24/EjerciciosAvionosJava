@@ -2,6 +2,7 @@ package TestObjetos;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -27,14 +28,29 @@ public class TestCircle {
 	}
 	
 	@Test
+	void equality1 (){
+	assertEquals(new Circle(new Point(1.0, 2.0), 3.0), new Circle(new Point(1.0, 2.0), 3.0));
+	}
+	
+	@Test
 	public void negativeEqualityRadius() {
 	  assertFalse(new Circle(new Point(0.0, 0.0), 1.0).equals(new Circle(new Point(0.0, 0.0), 0.0)));
 	}
-
 	
+	@Test
+	public void negativeEqualityRadius1() {
+	  assertNotEquals(new Circle(new Point(0.0, 0.0), 1.0), new Circle(new Point(0.0, 0.0), 0.0));
+	}
+
+
 	@Test
 	void negativeEqualityCenter (){
 	assertFalse(new Circle(new Point(1.0, 1.0), 1.0).equals(new Circle(new Point(0.0, 0.0), 1.0)));
+	}
+	
+	@Test
+	public void negativeEqualityCenter1() {
+	  assertNotEquals(new Circle(new Point(1.0, 1.0), 1.0), new Circle(new Point(0.0, 0.0), 1.0));
 	}
 	
 	@Test 

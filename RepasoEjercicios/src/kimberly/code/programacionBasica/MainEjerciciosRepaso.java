@@ -31,8 +31,12 @@ public class MainEjerciciosRepaso {
 //	System.out.println(Arreglos.max(new int[] {5, -2, -1}));
 //	System.out.println(Arreglos.max(new int[] {-3, 0, -21}));
 //	System.out.println(Arreglos.max(new int[] {100, -50, 21}));
-	System.out.println(Arreglos.numericMatrix(2, 3));
-	System.out.println(Arreglos.numericMatrix(3, 1));
+//	System.out.println(Arreglos.numericMatrix(2, 3));
+//	System.out.println(Arreglos.numericMatrix(3, 1));
+//	System.out.println(Arreglos.identify(3));
+//	System.out.println(Arreglos.identify(4));
+	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}}));
+		
 		
 		//EJERCICIOS ADICIONALES
 		

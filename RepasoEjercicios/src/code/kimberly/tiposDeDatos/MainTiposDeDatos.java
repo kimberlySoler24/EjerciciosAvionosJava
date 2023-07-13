@@ -1,7 +1,7 @@
 package code.kimberly.tiposDeDatos;
 
 import code.objetos.constructors.Circle;
-
+import code.otrosEjercicios.objetos.*;
 //import java.time.LocalDate;
 
 import kimberly.code.programacionBasica.Variables;
@@ -10,7 +10,7 @@ public class MainTiposDeDatos {
 
 	public static void main(String[] args) {
 		
-		System.out.println(Variables.distance(0.0, 0.0, 1.0, 1.0));
+//		System.out.println(Variables.distance(0.0, 0.0, 1.0, 1.0));
 //		LocalDate d = LocalDate.of(2023, 07, 5); 
 		//int n = 1; // es un tipo de dato. Los tipos de datos ayudan a que el código sea más fácil de entender, más organizados y 
 		//tengan menos errores
@@ -47,10 +47,16 @@ public class MainTiposDeDatos {
 //		System.out.println(circle2.intersects(circle3));
 		
 		
-		var circle4 = new Circle (new Point (0.0, 0.0), 1.0);
-		var circle5 = new Circle (new Point (1.0, 1.0), 1.0);
-		System.out.println(circle4.intersects(circle5));
-	
+//		var circle4 = new Circle (new Point (0.0, 0.0), 1.0);
+//		var circle5 = new Circle (new Point (1.0, 1.0), 1.0);
+//		System.out.println(circle4.intersects(circle5));
+		
+		var phone = new Format ("3017886214");
+		var phone1 = new Format ("4137860");
+		var phone2 = new Format ("41378601");
+		System.out.println(phone.formattedPhone());
+		System.out.println(phone1.formattedPhone());
+		System.out.println(phone2.formattedPhone());
 	}
 
 }

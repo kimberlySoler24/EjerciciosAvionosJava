@@ -1,6 +1,7 @@
 package kimberly.code.programacionBasica;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class Arreglos {
 
@@ -54,12 +55,58 @@ public class Arreglos {
 			var sum = 0;
 			var result = new int [row] [col]; 
 			for (var r=0; r < row; ++r) {
+				builder.append("[");
 				for (var c = 0; c < col; ++c) {
 					sum += 1;
 					builder.append(Integer.toString(result [r][c] = sum));
 				}
-				builder.append(System.lineSeparator());
+				builder.append("]").append(System.lineSeparator());
 			}
+			return builder.toString();
+		}
+		
+		//Create a function that, given the dimensions of a square matrix, returns a matrix with '0' in all cells, 
+		//except cells on the main diagonal with a 1. The main diagonal is a cell that shares an index for its row 
+		//and column. For example on square matrix m of size 3, then there's a '1' on m[0][0], m[1][1] and m[2][2].
+		
+		public static String identify (int number) {
+			var builder = new StringBuilder();
+			var result =new int [number][number];
+			for (var i = 0; i < number; i++) {
+				builder.append("[");
+				for (int j = 0; j < number; j++) {
+					if (i == j) {
+						builder.append(Integer.toString(result [i][j] = 1));
+					} else {
+						builder.append(Integer.toString(result [i][j] = 0));
+					}
+					
+				}
+				builder.append("]").append(System.lineSeparator());
+			}
+			return builder.toString();
+		}
+		
+//		Create a function that given a matrix with only two characters: ' ' and '*' returns a new matrix where each 
+//		cell that shares a row or column with a cell that has a '*' is a '.' character instead but only if in the original
+//		matrix there wasn't a '*'. For example if the matrix is:
+		
+		public static String expandingMatrix (char [][] array) {
+			var builder = new StringBuilder ();
+			var value = false;
+			for (int i = 0; i < array.length; i++) {
+				builder.append("[");
+				for (int j = 0; j < array[i].length; j++) {
+					if(array[i][j] == '*') {
+						builder.append(array[i][j] = '*');
+						value = true;
+					} else {
+
+					}
+				}
+			}
+				
+
 			return builder.toString();
 		}
 		
