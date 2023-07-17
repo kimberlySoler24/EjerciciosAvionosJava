@@ -347,7 +347,17 @@ public class MainConstructores {
 	 System.out.println( Arrays.toString(array2.stats()));
 	 
 	 
+	 /**
+	  * MATRICES 
+	  */
 	 
+	 var matrix1 = new MatrizOne (2, 3);
+	 System.out.println(matrix1.numericMatrix());
 	 
+	 var matrix2 = new MatrixTwo (3);
+	 System.out.println(matrix2.identify());
+	 
+	 var matrix3 = new MatrixTwo (4);
+	 System.out.println(matrix3.identify());
 	}
 }

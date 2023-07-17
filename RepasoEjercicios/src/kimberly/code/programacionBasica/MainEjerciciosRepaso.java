@@ -26,16 +26,19 @@ public class MainEjerciciosRepaso {
 		
 		//ARREGLOS
 //	System.out.println(Arrays.toString(Arreglos.stats(new int [] {5})));
-//    System.out.println(Arreglos.histogram(new int [] {5, 1, 3}));
+//  System.out.println(Arreglos.histogram(new int [] {5, 1, 3}));
 //	System.out.println(Arreglos.max(new int[] {-3, -2, -1}));
 //	System.out.println(Arreglos.max(new int[] {5, -2, -1}));
 //	System.out.println(Arreglos.max(new int[] {-3, 0, -21}));
 //	System.out.println(Arreglos.max(new int[] {100, -50, 21}));
-//	System.out.println(Arreglos.numericMatrix(2, 3));
+//	System.out.println(Arrays.toString(Arreglos.stats(new int [] {3})));
+//	System.out.println(Arreglos.numericMatrix(2,3));
 //	System.out.println(Arreglos.numericMatrix(3, 1));
 //	System.out.println(Arreglos.identify(3));
 //	System.out.println(Arreglos.identify(4));
-	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}}));
+
+//	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}}));
+//	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {'*', ' ', '*'}, {' ', ' ', ' '}}));
 		
 		
 		//EJERCICIOS ADICIONALES
@@ -97,6 +100,7 @@ public class MainEjerciciosRepaso {
 //		}
 		
 
+		System.out.println(Arrays.toString(Arreglos.quadratic(4, 8, 0)));
 		
 		
 		

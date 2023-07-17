@@ -57,6 +57,15 @@ public class MainTiposDeDatos {
 		System.out.println(phone.formattedPhone());
 		System.out.println(phone1.formattedPhone());
 		System.out.println(phone2.formattedPhone());
+		
+		var year = new YearLeast (2000);
+		System.out.println(year.isLeapYear());
+		
+		var year1 = new YearLeast (1900);
+		System.out.println(year1.isLeapYear());
+		
+		var day = new DaysOfWeek (5);
+		System.out.println(day.dayOfWeek());
 	}
 
 }
