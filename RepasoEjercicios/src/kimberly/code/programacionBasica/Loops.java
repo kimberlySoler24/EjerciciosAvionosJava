@@ -76,10 +76,11 @@ public class Loops {
 
 	public static int count(String word, String wordToFound) {
 		var count = 0;
+		var lengthWordToFound = wordToFound.length();
 		var index =word.indexOf(wordToFound);
 		while (index != -1) {
 		++count;
-		index = word.indexOf(wordToFound, index + wordToFound.length());
+		index = word.indexOf(wordToFound, index + lengthWordToFound);
 		}
 		return count;
 	}

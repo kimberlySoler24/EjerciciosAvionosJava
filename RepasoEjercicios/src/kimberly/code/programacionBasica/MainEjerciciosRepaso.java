@@ -19,9 +19,16 @@ public class MainEjerciciosRepaso {
 		
 //		System.out.println(Operators.truncate(123));
 		
+		//LOOPS
+		
+//		System.out.println(Loops.count("abracadabra", "ab"));
+		
 		
 		//CONDICIONALES 
 //		System.out.println(conditionals.camelCaseToSnakeCase("lastThreeDigits"));
+//		System.out.println(conditionals.snakeCaseToCamelCase("last_three_digits"));
+		
+		
 		
 		
 		//ARREGLOS
@@ -78,8 +85,8 @@ public class MainEjerciciosRepaso {
 //		System.out.println(EjerciciosAdicionales.minimumGradeNeeded(1.0, 1.5));
 //		
 //		//Puedo tener eso, pero en español?
-//		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.acme.co/en/about-us", "es"));
-//		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.java.com/es","fr"));
+		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.acme.co/en/about-us", "es"));
+		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.java.com/es","fr"));
 //		
 //		//Termina en vocal?
 //		System.out.println(EjerciciosAdicionales.endsInVocal("JAVA"));
@@ -99,8 +106,8 @@ public class MainEjerciciosRepaso {
 //		case 7 -> System.out.println("Domingo");
 //		}
 		
-
-		System.out.println(Arrays.toString(Arreglos.quadratic(4, 8, 0)));
+//
+//		System.out.println(Arrays.toString(Arreglos.quadratic(4, 8, 0)));
 		
 		
 		

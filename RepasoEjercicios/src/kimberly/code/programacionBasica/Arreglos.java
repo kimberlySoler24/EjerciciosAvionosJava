@@ -131,7 +131,7 @@ public class Arreglos {
 	
 	
 	  public static double discriminante(double a, double b, double c) {
-	        return b - 4*a*c;
+	        return b*b - 4*a*c;
 	    }
 	
 

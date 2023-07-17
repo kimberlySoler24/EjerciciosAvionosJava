@@ -86,14 +86,16 @@ public class EjerciciosAdicionales {
 
 	public static String changeLanguage(String link, String language) {
 		var builder = new StringBuilder();
-		var firstSlash = link.indexOf('/');
-		var secondSlash = link.indexOf('/', firstSlash + 1);
-		var thirdSlash = link.indexOf('/', secondSlash + 1);
-		var fourSlash = link.indexOf('/', thirdSlash + 1);
-		var changeLanguage = fourSlash != -1
-				? builder.append(link.substring(0, thirdSlash + 1)).append(language).append(link.substring(fourSlash))
-				: builder.append(link.substring(0, thirdSlash + 1)).append(language);
-
+		var slash = link.indexOf('/');
+		var count = 0;
+		while (slash != -1) {
+			count++;
+			slash = link.indexOf('/', slash + 1);
+			if (count == 2) {
+				builder.append(link.substring(0, slash + 1)).append(language)
+				.append(link.substring(slash + 3));
+			}
+		}
 		return builder.toString();
 
 	}

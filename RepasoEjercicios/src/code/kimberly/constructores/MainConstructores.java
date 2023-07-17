@@ -6,7 +6,7 @@ import code.variables.constructors.*;
 import code.strings.constructors.*;
 import code.loops.constructors.*;
 import code.conditional.constructors.*;
-
+import code.otrosEjercicios.objetos.*;
 import java.util.Arrays;
 
 import code.arrays.constructores.*;
@@ -337,27 +337,36 @@ public class MainConstructores {
 	/**
 	 * CONTAR REPETICIONES 
 	 */
-	 var array = new contarPosiciones (new int [] {2} );
-	 System.out.println( Arrays.toString(array.stats()));
-	 
-	 var array1 = new contarPosiciones (new int [] {5, 5} );
-	 System.out.println( Arrays.toString(array1.stats()));
-	 
-	 var array2 = new contarPosiciones (new int [] {0, 1, 2, 3, 2, 0, 5, 1, 2} );
-	 System.out.println( Arrays.toString(array2.stats()));
-	 
+//	 var array = new contarPosiciones (new int [] {2} );
+//	 System.out.println( Arrays.toString(array.stats()));
+//	 
+//	 var array1 = new contarPosiciones (new int [] {5, 5} );
+//	 System.out.println( Arrays.toString(array1.stats()));
+//	 
+//	 var array2 = new contarPosiciones (new int [] {0, 1, 2, 3, 2, 0, 5, 1, 2} );
+//	 System.out.println( Arrays.toString(array2.stats()));
+//	 
 	 
 	 /**
 	  * MATRICES 
+	  */	 
+//	 var matrix1 = new MatrizOne (2, 3);
+//	 System.out.println(matrix1.numericMatrix());
+//	 
+//	 var matrix2 = new MatrixTwo (3);
+//	 System.out.println(matrix2.identify());
+//	 
+//	 var matrix3 = new MatrixTwo (4);
+//	 System.out.println(matrix3.identify());
+	 
+	 /**
+	  * CALCULAR LA FUNCIÓN CUADRÁTICA
 	  */
 	 
-	 var matrix1 = new MatrizOne (2, 3);
-	 System.out.println(matrix1.numericMatrix());
+	 var discrimi1 = new Cuadratic (1.0, -1.0, -12);
+	 System.out.println("El valor es:" + Arrays.toString(discrimi1.Quadratic()));
 	 
-	 var matrix2 = new MatrixTwo (3);
-	 System.out.println(matrix2.identify());
 	 
-	 var matrix3 = new MatrixTwo (4);
-	 System.out.println(matrix3.identify());
+	 
 	}
 }

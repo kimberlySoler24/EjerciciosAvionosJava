@@ -96,6 +96,8 @@ public class conditionals {
 			}
 			
 		}
+
+		
 		return builder.toString();
 	}
 	
