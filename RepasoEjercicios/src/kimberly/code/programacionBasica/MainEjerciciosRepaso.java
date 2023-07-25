@@ -2,6 +2,8 @@ package kimberly.code.programacionBasica;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.HashSet;
+
 
 public class MainEjerciciosRepaso {
 
@@ -22,29 +24,36 @@ public class MainEjerciciosRepaso {
 		//LOOPS
 		
 //		System.out.println(Loops.count("abracadabra", "ab"));
+//		System.out.println(RepasoEjerciciosDificiles.count("abracadabra", "ab"));
+//		System.out.println(RepasoEjerciciosDificiles.count("110101110101100", "01"));
+//		System.out.println(RepasoEjerciciosDificiles.count("ssa", "ss"));
 		
 		
 		//CONDICIONALES 
 //		System.out.println(conditionals.camelCaseToSnakeCase("lastThreeDigits"));
 //		System.out.println(conditionals.snakeCaseToCamelCase("last_three_digits"));
-		
-		
+//		System.out.println(RepasoEjerciciosDificiles.snakeCaseToCamelCase("lastThreeDigits"));
+//		System.out.println(RepasoEjerciciosDificiles.camelCaseToSnakeCase("last_three_digits"));
+//		System.out.println(RepasoEjerciciosDificiles.camelCaseToSnakeCase("vowels"));
 		
 		
 		//ARREGLOS
-//	System.out.println(Arrays.toString(Arreglos.stats(new int [] {5})));
+//	System.out.println(Arrays.toString(Arreglos.s(new int [] {5})));
 //  System.out.println(Arreglos.histogram(new int [] {5, 1, 3}));
 //	System.out.println(Arreglos.max(new int[] {-3, -2, -1}));
 //	System.out.println(Arreglos.max(new int[] {5, -2, -1}));
 //	System.out.println(Arreglos.max(new int[] {-3, 0, -21}));
 //	System.out.println(Arreglos.max(new int[] {100, -50, 21}));
-//	System.out.println(Arrays.toString(Arreglos.stats(new int [] {3})));
+//	System.out.println(Arrays.toString(Arreglos.s(new int [] {3})));
 //	System.out.println(Arreglos.numericMatrix(2,3));
 //	System.out.println(Arreglos.numericMatrix(3, 1));
 //	System.out.println(Arreglos.identify(3));
 //	System.out.println(Arreglos.identify(4));
 
+//	System.out.println(Arrays.toString(Arreglos.FoundChar(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}})));
+//	System.out.println(Arrays.toString(Arreglos.FoundChar(new char[][] {{' ', ' ', ' '}, {'*', ' ', '*'}, {' ', ' ', ' '}})));
 //	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}}));
+//	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {'*', ' ', '*'}, {' ', ' ', ' '}}));
 //	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {'*', ' ', '*'}, {' ', ' ', ' '}}));
 		
 		
@@ -85,9 +94,10 @@ public class MainEjerciciosRepaso {
 //		System.out.println(EjerciciosAdicionales.minimumGradeNeeded(1.0, 1.5));
 //		
 //		//Puedo tener eso, pero en español?
-		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.acme.co/en/about-us", "es"));
-		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.java.com/es","fr"));
-//		
+//		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.java.com/es","fr"));
+//		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.acme.co/en/about-us", "es"));
+//		System.out.println(RepasoEjerciciosDificiles.changeLanguage("https://www.acme.co/en/about-us", "es"));
+		System.out.println(RepasoEjerciciosDificiles.changeLanguage("https://www.java.com/es","fr"));
 //		//Termina en vocal?
 //		System.out.println(EjerciciosAdicionales.endsInVocal("JAVA"));
 //		System.out.println(EjerciciosAdicionales.endsInVocal("JAVA"));
@@ -109,16 +119,42 @@ public class MainEjerciciosRepaso {
 //
 //		System.out.println(Arrays.toString(Arreglos.quadratic(4, 8, 0)));
 		
+
 		
+/**		
+		HashSet<String> nombres = new HashSet<>();
+		nombres.add("camila");
+		nombres.add("andrea");
+		nombres.add("wilson");
+		nombres.add("jairo");
+		nombres.add("andrea");
 		
+		System.out.println("HashSet de nombres: " + nombres);
 		
+		var encontrar = "andrea";
+		if(nombres.contains(encontrar)) {
+			System.out.println("Está en el conjunto");
+		} else {
+			System.out.println("No está en el conjunto");
+		}
 		
+		nombres.remove("andrea");
 		
+		System.out.println(nombres.size());
 		
+		for (var nombre : nombres) {
+			System.out.println(nombre);				
+		}
 		
+		nombres.clear();
 		
+		nombres.isEmpty();
 		
+		System.out.println(nombres.isEmpty());
+
+**/		
 		
 	}
+
 
 }

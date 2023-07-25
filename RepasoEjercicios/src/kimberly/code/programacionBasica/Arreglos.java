@@ -2,6 +2,7 @@ package kimberly.code.programacionBasica;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.HashSet;
 
 public class Arreglos {
 
@@ -102,34 +103,53 @@ public class Arreglos {
 //		Create a function that given a matrix with only two characters: ' ' and '*' returns a new matrix where each 
 //		cell that shares a row or column with a cell that has a '*' is a '.' character instead but only if in the original
 //		matrix there wasn't a '*'. For example if the matrix is:
-
-	public static String expandingMatrix(char[][] array) {
-		var builder = new StringBuilder();
-		var length = array.length;
-		var modifiedMatrix = new char[length][length];
-		for (int i = 0; i < length; i++) {
-			builder.append('[');
-			for (int j = 0; j < array[i].length; j++) {
-				if (array[i][j] == '*') {
-					for (int k = 0; k < length; k += 2) {
-						builder.append(modifiedMatrix[k][j] = '.');
+	
+	private static int [] FoundChar (char[][] matrix) {
+		var array = new int [4];
+//		HashSet<Integer> array = new HashSet<Integer>();
+		var index = 0;
+		var index1 = 1;
+//		HashSet <Integer> pos= new HashSet <> ();
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix.length; j++) {
+				if (matrix[i][j] == '*') {
+//					pos.add(i);
+//					pos.add(j);
+					array[index] = i;
+					array[index1] = j;
+					index += 2;
+					index1 += 2;
 					}
-					for (int l = 0; l < length; l += 2) {
-						builder.append(modifiedMatrix[i][l] = '.');
-					}
-					builder.append(modifiedMatrix[i][j] = '*');
-				}
-				if(modifiedMatrix[i][j] != '.') {
-					builder.append(' ');
 				}
 			}
+		return array;
+	}
+
+	public static String expandingMatrix(char[][] matrix) {
+		var builder = new StringBuilder ();
+		var array =  FoundChar(matrix);
+		var newMatrix = new char[3][3];
+		for (int i = 0; i < newMatrix.length; i++) {
+			builder.append('[');
+			for (int j = 0; j < newMatrix.length; j++) {	
+						if (i == array[0] || j == array[1]) {
+							if ( i == array[0] && j == array[1]) {
+								builder.append(newMatrix [i][j]='*');
+							}
+							else {
+								builder.append(newMatrix [i][j]='.');
+							}
+						} else {
+							builder.append(newMatrix [i][j] = ' ');
+						}
+				}
 			builder.append(']').append(System.lineSeparator());
-		}
+			}
 		return builder.toString();
 	}
 	
-	
-	
+// hallar la cuadratica de una función	
+
 	  public static double discriminante(double a, double b, double c) {
 	        return b*b - 4*a*c;
 	    }
