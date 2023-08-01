@@ -52,7 +52,7 @@ public class MainEjerciciosRepaso {
 
 //	System.out.println(Arrays.toString(Arreglos.FoundChar(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}})));
 //	System.out.println(Arrays.toString(Arreglos.FoundChar(new char[][] {{' ', ' ', ' '}, {'*', ' ', '*'}, {' ', ' ', ' '}})));
-//	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}}));
+	System.out.println(Arreglos.toString(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}}));
 //	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {'*', ' ', '*'}, {' ', ' ', ' '}}));
 //	System.out.println(Arreglos.expandingMatrix(new char[][] {{' ', ' ', ' '}, {'*', ' ', '*'}, {' ', ' ', ' '}}));
 		
@@ -97,7 +97,7 @@ public class MainEjerciciosRepaso {
 //		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.java.com/es","fr"));
 //		System.out.println(EjerciciosAdicionales.changeLanguage("https://www.acme.co/en/about-us", "es"));
 //		System.out.println(RepasoEjerciciosDificiles.changeLanguage("https://www.acme.co/en/about-us", "es"));
-		System.out.println(RepasoEjerciciosDificiles.changeLanguage("https://www.java.com/es","fr"));
+//		System.out.println(RepasoEjerciciosDificiles.changeLanguage("https://www.java.com/es","fr"));
 //		//Termina en vocal?
 //		System.out.println(EjerciciosAdicionales.endsInVocal("JAVA"));
 //		System.out.println(EjerciciosAdicionales.endsInVocal("JAVA"));
@@ -153,7 +153,15 @@ public class MainEjerciciosRepaso {
 		System.out.println(nombres.isEmpty());
 
 **/		
-		
+	
+//	System.out.println(RepasoEjerciciosDificiles.timeToSeconds("2023-04-20T00:00:15"));
+//	System.out.println(RepasoEjerciciosDificiles.timeToSeconds("2023-04-20T00:01:00"));
+//	System.out.println(RepasoEjerciciosDificiles.timeToSeconds("2023-04-20T00:10:00"));
+//	System.out.println(RepasoEjerciciosDificiles.timeToSeconds("2023-04-20T01:00:00"));
+//	System.out.println(RepasoEjerciciosDificiles.timeToSeconds("00:00:32"));
+//	System.out.println(RepasoEjerciciosDificiles.timeToSeconds("00:02:00"));
+//	System.out.println(RepasoEjerciciosDificiles.timeToSeconds("10:00:00"));
+//	System.out.println(RepasoEjerciciosDificiles.formattedPhone("1234567890"));
 	}
 
 
