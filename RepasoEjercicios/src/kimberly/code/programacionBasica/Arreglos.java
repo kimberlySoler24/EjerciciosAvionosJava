@@ -103,73 +103,69 @@ public class Arreglos {
 //		Create a function that given a matrix with only two characters: ' ' and '*' returns a new matrix where each 
 //		cell that shares a row or column with a cell that has a '*' is a '.' character instead but only if in the original
 //		matrix there wasn't a '*'. For example if the matrix is:
-	
-	private static int [] FoundChar (char[][] matrix) {
-		var array = new int [4];
-//		HashSet<Integer> array = new HashSet<Integer>();
-		var index = 0;
-		var index1 = 1;
-//		HashSet <Integer> pos= new HashSet <> ();
+
+	public static char[][] expandingMatrix(char[][] matrix) {
+		var k = 0;
+		var l = 0;
+		var copyMatrix = Arrays.copyOf(matrix, matrix.length);
 		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix.length; j++) {
+			for (int j = 0; j < matrix[i].length; j++) {
 				if (matrix[i][j] == '*') {
-//					pos.add(i);
-//					pos.add(j);
-					array[index] = i;
-					array[index1] = j;
-					index += 2;
-					index1 += 2;
+					k = i;
+					l = j;
+					for (int m = 0; m < copyMatrix.length; m++) {
+						for (int n = 0; n < copyMatrix[m].length; n++) {
+							if (matrix[m][n] == '*') {
+								copyMatrix[m][n] = '*';
+							} else {
+								if (m == k) {
+									copyMatrix[k][n] = '.';
+								} else if (n == l) {
+									copyMatrix[m][l] = '.';
+								}
+							}
+						}
 					}
 				}
 			}
-		return array;
+		}
+		return copyMatrix;
 	}
 
-	public static String expandingMatrix(char[][] matrix) {
-		var builder = new StringBuilder ();
-		var array =  FoundChar(matrix);
-		var newMatrix = new char[3][3];
-		for (int i = 0; i < newMatrix.length; i++) {
+	public static String toString(char[][] matrix) {
+		var matrixToSee = expandingMatrix(matrix);
+		var builder = new StringBuilder();
+		for (char[] fila : matrixToSee) {
 			builder.append('[');
-			for (int j = 0; j < newMatrix.length; j++) {	
-						if (i == array[0] || j == array[1]) {
-							if ( i == array[0] && j == array[1]) {
-								builder.append(newMatrix [i][j]='*');
-							}
-							else {
-								builder.append(newMatrix [i][j]='.');
-							}
-						} else {
-							builder.append(newMatrix [i][j] = ' ');
-						}
-				}
-			builder.append(']').append(System.lineSeparator());
+			for (char columna : fila) {
+				builder.append(columna);
 			}
+			builder.append(']').append(System.lineSeparator());
+		}
 		return builder.toString();
 	}
-	
+
 // hallar la cuadratica de una función	
 
-	  public static double discriminante(double a, double b, double c) {
-	        return b*b - 4*a*c;
-	    }
-	
+	public static double discriminante(double a, double b, double c) {
+		return b * b - 4 * a * c;
+	}
 
 	public static double[] quadratic(double a, double b, double c) {
-        double discriminante = discriminante(a, b, c);
-        if (discriminante < 0) {
-            return new double[0];
-        } else if (discriminante == 0) {
-            var value = new double [] {-b/2*a};
-            return value;
-        } else {
-            var raiz = Math.sqrt(discriminante);
-            var raiz1 = (-b + raiz)/(2*a);
-            var raiz2 = (-b - raiz)/(2*a);
-            var raices = new double[] {raiz1, raiz2};
-            return raices;
-        }
+		double discriminante = discriminante(a, b, c);
+		if (discriminante < 0) {
+			return new double[0];
+		} else if (discriminante == 0) {
+			var value = new double[] { -b / 2 * a };
+			return value;
+		} else {
+			var raiz = Math.sqrt(discriminante);
+			var raiz1 = (-b + raiz) / (2 * a);
+			var raiz2 = (-b - raiz) / (2 * a);
+			var raices = new double[] { raiz1, raiz2 };
+			return raices;
+		}
 
-    }
+	}
 
 }
