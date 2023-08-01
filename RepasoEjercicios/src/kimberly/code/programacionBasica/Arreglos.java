@@ -105,23 +105,23 @@ public class Arreglos {
 //		matrix there wasn't a '*'. For example if the matrix is:
 
 	public static char[][] expandingMatrix(char[][] matrix) {
-		var k = 0;
-		var l = 0;
+		var positionOfAsteriskI = 0;
+		var positionOfAsteriskJ = 0;
 		var copyMatrix = Arrays.copyOf(matrix, matrix.length);
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[i].length; j++) {
 				if (matrix[i][j] == '*') {
-					k = i;
-					l = j;
-					for (int m = 0; m < copyMatrix.length; m++) {
-						for (int n = 0; n < copyMatrix[m].length; n++) {
-							if (matrix[m][n] == '*') {
-								copyMatrix[m][n] = '*';
+					positionOfAsteriskI = i;
+					positionOfAsteriskJ = j;
+					for (int row = 0; row < copyMatrix.length; row++) {
+						for (int col = 0; col < copyMatrix[row].length; col++) {
+							if (matrix[row][col] == '*') {
+								copyMatrix[row][col] = '*';
 							} else {
-								if (m == k) {
-									copyMatrix[k][n] = '.';
-								} else if (n == l) {
-									copyMatrix[m][l] = '.';
+								if (row == positionOfAsteriskI) {
+									copyMatrix[positionOfAsteriskI][col] = '.';
+								} else if (col == positionOfAsteriskJ) {
+									copyMatrix[row][positionOfAsteriskJ] = '.';
 								}
 							}
 						}

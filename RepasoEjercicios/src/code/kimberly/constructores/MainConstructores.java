@@ -358,15 +358,34 @@ public class MainConstructores {
 //	 
 //	 var matrix3 = new MatrixTwo (4);
 //	 System.out.println(matrix3.identify());
+		
+//	var matrix4 = new MatrixChar(new char[][] {{' ', ' ', ' '}, {' ', '*', ' '}, {' ', ' ', ' '}});
+//	var matrix5 = new MatrixChar(new char[][] {{' ', ' ', ' '}, {'*', ' ', '*'}, {' ', ' ', ' '}});
+//	System.out.println(matrix4.toStrings(matrix4));
+//	System.out.println(matrix5.toStrings(matrix5));
 	 
 	 /**
 	  * CALCULAR LA FUNCIÓN CUADRÁTICA
 	  */
 	 
-	 var discrimi1 = new Cuadratic (1.0, -1.0, -12);
-	 System.out.println("El valor es:" + Arrays.toString(discrimi1.Quadratic()));
+//	 var discrimi1 = new Cuadratic (1.0, -1.0, -12);
+//	 System.out.println("El valor es:" + Arrays.toString(discrimi1.Quadratic()));
 	 
-	 
-	 
+		
+	 // PASAR TIEMPO A SEGUNDOS
+	var date1 = new TimeToSeconds("2023-04-20T00:00:15");
+	System.out.println(date1.timeToSeconds());
+	var date2 = new TimeToSeconds("2023-04-20T00:01:00");
+	System.out.println(date2.timeToSeconds());
+	var date3 = new TimeToSeconds("2023-04-20T00:10:00");
+	System.out.println(date3.timeToSeconds());
+	var date4 = new TimeToSeconds("2023-04-20T01:00:00");
+	System.out.println(date4.timeToSeconds());
+	var date5 = new TimeToSeconds("00:00:32");
+	System.out.println(date5.timeToSeconds());
+	var date6 = new TimeToSeconds("00:02:00");
+	System.out.println(date6.timeToSeconds());
+	var date7 = new TimeToSeconds("10:00:00");
+	System.out.println(date7.timeToSeconds());
 	}
 }
